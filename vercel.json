@@ -1,32 +1,14 @@
 {
   "builds": [
     {
-      "src": "index.js",
+      "src": "./app.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "dist/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/UserRouter",
+      "src": "/.*",
       "dest": "index.js"
-    },
-    {
-      "src": "/UserRouter/(.*)",
-      "dest": "index.js"
-    },
-
-  
-    {
-      "src": "/",
-      "dest": "dist/index.html"
-    },
-    {
-      "src": "/(.+)",
-      "dest": "dist/$1"
     }
   ]
 }
