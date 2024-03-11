@@ -6,7 +6,6 @@ exports.getUser = async (req, res) => {
   try {
     const vaildUserOne = await User.findOne({_id:userId});
     res.status(201).json({status:201,vaildUserOne})
-    // console.log(vaildUserOne)
 
     
   } catch (error) {
@@ -18,3 +17,5 @@ exports.getUser = async (req, res) => {
   
 
 };
+
+// commit next
